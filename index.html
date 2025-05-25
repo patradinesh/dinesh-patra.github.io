@@ -10,17 +10,45 @@
     body {
       padding: 2rem;
       font-family: 'Segoe UI', sans-serif;
-      background-color: #f8f9fa;
+      background-color: #f0f2f5;
     }
     .section-title {
       margin-top: 2rem;
-      color: #343a40;
+      color: #212529;
+    }
+    .card-flip {
+      perspective: 1000px;
+    }
+    .card-flip-inner {
+      position: relative;
+      width: 100%;
+      height: 100%;
+      transition: transform 0.8s;
+      transform-style: preserve-3d;
+    }
+    .card-flip:hover .card-flip-inner {
+      transform: rotateY(180deg);
+    }
+    .card-front, .card-back {
+      position: absolute;
+      width: 100%;
+      backface-visibility: hidden;
+      border: 1px solid #dee2e6;
+      border-radius: 0.5rem;
+      padding: 1rem;
+    }
+    .card-front {
+      background-color: #fff;
+    }
+    .card-back {
+      background-color: #e9ecef;
+      transform: rotateY(180deg);
     }
   </style>
 </head>
 <body>
   <div class="container">
-    <header class="mb-5">
+    <header class="mb-5 text-center">
       <h1 class="display-4">Dinesh Patra</h1>
       <p class="lead">DevOps Architect | EKS Kubernetes Expert</p>
       <a href="https://www.linkedin.com/in/dinesh-patra-9977b425/" target="_blank" class="btn btn-primary">LinkedIn Profile</a>
@@ -45,20 +73,80 @@
 </section>
 
 <section>
-  <h2 class="section-title">Upwork Projects</h2>
-  <h5>DevOps Architect for Startups</h5>
-  <ul>
-    <li>Designed and deployed secure and scalable AWS infrastructure for early-stage tech startups.</li>
-    <li>Implemented end-to-end CI/CD pipelines tailored to agile startup environments.</li>
-    <li>Introduced cost-optimized architecture while maintaining high availability and fault tolerance.</li>
-  </ul>
+  <h2 class="section-title">Featured Projects</h2>
+  <div class="row g-4">
+    <div class="col-md-6">
+      <div class="card-flip">
+        <div class="card-flip-inner">
+          <div class="card-front">
+            <h5>DevOps Architect for Startups</h5>
+            <p>Secure & scalable cloud infra on AWS</p>
+          </div>
+          <div class="card-back">
+            <ul>
+              <li>Designed & deployed AWS infra for early-stage startups</li>
+              <li>Implemented CI/CD pipelines tailored to agile environments</li>
+              <li>Optimized cost and ensured high availability</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
 
-  <h5>EKS Kubernetes Expert</h5>
-  <ul>
-    <li>Led Kubernetes migration projects from self-managed clusters to Amazon EKS.</li>
-    <li>Created Helm charts and GitOps workflows using ArgoCD.</li>
-    <li>Automated cluster operations, node group scaling, and custom metrics deployment.</li>
-  </ul>
+    <div class="col-md-6">
+      <div class="card-flip">
+        <div class="card-flip-inner">
+          <div class="card-front">
+            <h5>EKS Kubernetes Expert</h5>
+            <p>Migrating and managing production clusters</p>
+          </div>
+          <div class="card-back">
+            <ul>
+              <li>Migrated clusters to Amazon EKS</li>
+              <li>Created Helm charts and GitOps with ArgoCD</li>
+              <li>Automated cluster operations and scaling</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card-flip">
+        <div class="card-flip-inner">
+          <div class="card-front">
+            <h5>Kubernetes GitOps Demo</h5>
+            <p>Showcasing GitOps using ArgoCD</p>
+          </div>
+          <div class="card-back">
+            <ul>
+              <li>ArgoCD-driven GitOps deployment pipeline</li>
+              <li>Demo repo with microservices and Helm charts</li>
+              <li>Includes monitoring and rollback workflows</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="col-md-6">
+      <div class="card-flip">
+        <div class="card-flip-inner">
+          <div class="card-front">
+            <h5>Terraform EKS Blueprint</h5>
+            <p>Reusable IaC for AWS EKS</p>
+          </div>
+          <div class="card-back">
+            <ul>
+              <li>Terraform modules for launching EKS clusters</li>
+              <li>Preconfigured with node groups and monitoring</li>
+              <li>Includes autoscaler and cluster policies</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
 </section>
 
 <section>
@@ -66,7 +154,7 @@
   <p>I believe in solving real-world business problems with elegant infrastructure design and automation. My approach balances strategic thinking with a hands-on problem-solving mindset.</p>
 </section>
 
-<footer class="mt-5">
+<footer class="mt-5 text-center">
   <p>Let’s work together! Whether you're building your MVP or scaling to millions of users, I bring the experience and mindset to get your cloud and DevOps strategy right from day one.</p>
   <p><a href="https://www.linkedin.com/in/dinesh-patra-9977b425/" target="_blank">Connect with me on LinkedIn</a></p>
 </footer>
