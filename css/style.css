@@ -330,6 +330,14 @@ nav {
     color: var(--primary-color);
 }
 
+.skill-item img {
+    width: 40px;
+    height: 40px;
+    margin-bottom: 10px;
+    object-fit: contain;
+    filter: brightness(0) saturate(100%) invert(37%) sepia(74%) saturate(1529%) hue-rotate(202deg) brightness(97%) contrast(101%);
+}
+
 /* Projects Section */
 .projects {
     background-color: var(--bg-color);
