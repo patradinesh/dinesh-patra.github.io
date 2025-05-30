@@ -10,6 +10,17 @@
     --shadow-color: rgba(0, 0, 0, 0.1);
 }
 
+:root.dark-theme {
+    --primary-color: #3b82f6;
+    --secondary-color: #94a3b8;
+    --accent-color: #38bdf8;
+    --text-color: #f8fafc;
+    --bg-color: #0f172a;
+    --bg-alt-color: #1e293b;
+    --border-color: #334155;
+    --shadow-color: rgba(0, 0, 0, 0.5);
+}
+
 * {
     margin: 0;
     padding: 0;
@@ -25,11 +36,13 @@ body {
     color: var(--text-color);
     line-height: 1.6;
     background-color: var(--bg-color);
+    transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 a {
     text-decoration: none;
     color: inherit;
+    transition: color 0.3s ease;
 }
 
 ul {
@@ -572,6 +585,61 @@ footer {
     text-align: center;
 }
 
+/* Theme Toggle */
+.theme-toggle {
+    display: flex;
+    align-items: center;
+    margin-left: 20px;
+}
+
+.theme-switch {
+    opacity: 0;
+    position: absolute;
+}
+
+.switch-label {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 4px;
+    width: 60px;
+    height: 30px;
+    background-color: var(--bg-alt-color);
+    border-radius: 50px;
+    cursor: pointer;
+    box-shadow: 0 2px 5px var(--shadow-color);
+    transition: background-color 0.3s ease;
+}
+
+.fa-sun {
+    color: #f59e0b;
+    font-size: 16px;
+}
+
+.fa-moon {
+    color: #6366f1;
+    font-size: 16px;
+}
+
+.toggle-ball {
+    position: absolute;
+    left: 4px;
+    width: 22px;
+    height: 22px;
+    border-radius: 50%;
+    background-color: var(--primary-color);
+    transition: transform 0.3s ease, background-color 0.3s ease;
+}
+
+.theme-switch:checked + .switch-label .toggle-ball {
+    transform: translateX(30px);
+}
+
+.theme-switch:checked + .switch-label {
+    background-color: var(--bg-alt-color);
+}
+
 /* Responsive Styles */
 @media (max-width: 992px) {
     .hero-content {
@@ -626,6 +694,10 @@ footer {
 
     .hamburger.active .bar:nth-child(3) {
         transform: translateY(-8px) rotate(-45deg);
+    }
+
+    .theme-toggle {
+        margin-right: 20px;
     }
 
     .hero-text h1 {

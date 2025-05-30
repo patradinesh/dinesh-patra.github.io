@@ -1,3 +1,34 @@
+// Theme toggle functionality
+const themeSwitch = document.getElementById('theme-switch');
+const htmlRoot = document.documentElement;
+
+// Check for saved theme preference or use preferred color scheme
+const savedTheme = localStorage.getItem('theme');
+if (savedTheme === 'dark') {
+    htmlRoot.classList.add('dark-theme');
+    themeSwitch.checked = true;
+} else if (savedTheme === 'light') {
+    htmlRoot.classList.remove('dark-theme');
+    themeSwitch.checked = false;
+} else {
+    // Check system preference
+    if (window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches) {
+        htmlRoot.classList.add('dark-theme');
+        themeSwitch.checked = true;
+    }
+}
+
+// Theme toggle event handler
+themeSwitch.addEventListener('change', function() {
+    if (this.checked) {
+        htmlRoot.classList.add('dark-theme');
+        localStorage.setItem('theme', 'dark');
+    } else {
+        htmlRoot.classList.remove('dark-theme');
+        localStorage.setItem('theme', 'light');
+    }
+});
+
 // Mobile navigation menu toggle
 const hamburger = document.querySelector('.hamburger');
 const navLinks = document.querySelector('.nav-links');
