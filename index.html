@@ -1,111 +1,303 @@
 <!DOCTYPE html>
-
-<html lang="en" data-bs-theme="light">
+<html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Dinesh Patra - DevOps Architect</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
-  <style>
-    body {
-      padding: 2rem;
-      font-family: 'Segoe UI', sans-serif;
-      background-color: var(--bs-body-bg);
-      color: var(--bs-body-color);
-    }
-    .section-title {
-      margin-top: 2rem;
-    }
-    .card-flip {
-      perspective: 1000px;
-    }
-    .card-flip-inner {
-      position: relative;
-      width: 100%;
-      height: 100%;
-      transition: transform 0.8s;
-      transform-style: preserve-3d;
-    }
-    .card-flip:hover .card-flip-inner {
-      transform: rotateY(180deg);
-    }
-    .card-front, .card-back {
-      position: absolute;
-      width: 100%;
-      backface-visibility: hidden;
-      border: 1px solid var(--bs-border-color);
-      border-radius: 0.5rem;
-      padding: 1rem;
-    }
-    .card-front {
-      background-color: var(--bs-card-bg);
-    }
-    .card-back {
-      background-color: var(--bs-secondary-bg);
-      transform: rotateY(180deg);
-    }
-    .theme-toggle {
-      position: absolute;
-      top: 1rem;
-      right: 1rem;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dinesh Patra | Portfolio</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 </head>
 <body>
-  <div class="container">
-    <button class="btn btn-secondary theme-toggle" onclick="toggleTheme()">Toggle Dark Mode</button>
-    <header class="mb-5 text-center">
-      <h1 class="display-4">Dinesh Patra</h1>
-      <p class="lead">DevOps Architect | EKS Kubernetes Expert</p>
-      <a href="https://www.linkedin.com/in/dinesh-patra-9977b425/" target="_blank" class="btn btn-primary">LinkedIn Profile</a>
+    <!-- Header Section -->
+    <header>
+        <div class="container">
+            <nav>
+                <div class="logo">
+                    <h1>Dinesh<span>Patra</span></h1>
+                </div>
+                <ul class="nav-links">
+                    <li><a href="#home" class="active">Home</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="#skills">Skills</a></li>
+                    <li><a href="#clients">Clients</a></li>
+                    <li><a href="#projects">Projects</a></li>
+                    <li><a href="#contact">Contact</a></li>
+                </ul>
+                <div class="hamburger">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </div>
+            </nav>
+        </div>
     </header>
 
-```
-<section>
-  <h2 class="section-title">About Me</h2>
-  <p>I am a seasoned DevOps Architect with over a decade of experience in cloud-native development, infrastructure automation, and CI/CD workflows. I specialize in helping startups build scalable, secure, and high-performing cloud systems using AWS, Kubernetes (EKS), and modern DevOps tools.</p>
-</section>
+    <!-- Hero Section -->
+    <section id="home" class="hero">
+        <div class="container">
+            <div class="hero-content">
+                <div class="hero-text">
+                    <h1>Hello, I'm <span>Dinesh Patra</span></h1>
+                    <h2>Solutions Architect</h2>
+                    <p>Passionate about building secure, scalable cloud infrastructure and automation solutions that drive innovation and operational excellence.</p>
+                    <div class="hero-buttons">
+                        <a href="#contact" class="btn primary-btn">Get In Touch</a>
+                        <a href="#projects" class="btn secondary-btn">View My Work</a>
+                    </div>
+                </div>
+                <div class="hero-image">
+                    <img src="img/profile.jpg" alt="Dinesh Patra">
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section>
-  <h2 class="section-title">Core Skills</h2>
-  <ul>
-    <li><strong>Cloud Platforms</strong>: AWS (Certified Solutions Architect), GCP</li>
-    <li><strong>Containerization</strong>: Kubernetes (EKS), Docker</li>
-    <li><strong>IaC</strong>: Terraform, CloudFormation, Helm</li>
-    <li><strong>CI/CD</strong>: Jenkins, GitHub Actions, GitLab CI/CD</li>
-    <li><strong>Monitoring</strong>: Prometheus, Grafana, CloudWatch</li>
-    <li><strong>Scripting & Automation</strong>: Bash, Python</li>
-  </ul>
-</section>
+    <!-- About Section -->
+    <section id="about" class="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <div class="about-content">
+                <div class="about-text">
+                    <p>
+                        I am a seasoned DevOps and Cloud Architect with over a decade of experience 
+                        designing, automating, and optimizing scalable, secure infrastructures using 
+                        Terraform, Docker, and Kubernetes on AWS. I've implemented 
+                        and maintained enterprise-grade CI/CD and GitOps workflows, integrated compliance 
+                        and security in highly regulated environments such as finance, and mentored 
+                        cross-functional teams on DevOps best practices.
+                    </p>                    
+                    <p>
+                        With growing curiosity and enthusiasm, I am exploring the intersection of DevOps and 
+                        emerging AI/ML systems. I'm particularly interested in the infrastructure and 
+                        orchestration challenges behind deploying large language models (LLMs), 
+                        Retrieval-Augmented Generation (RAG) systems, and Managed Cloud Platforms (MCP) 
+                        that power intelligent applications. I'm excited about supporting scalable MLOps 
+                        pipelines and enabling reproducible, secure AI workloads that align with modern 
+                        DevOps principles.
+                    </p>
+                    <div class="about-details">
+                        <div class="about-item">
+                            <h3>Education</h3>
+                            <p>Bachelor of Technology in Electronics & Communication</p>
+                        </div>
+                        <div class="about-item">
+                            <h3>Experience</h3>
+                            <p>18+ years in System Design and DevOps Operations</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section>
-  <h2 class="section-title">Featured Projects</h2>
-  <div class="row g-4">
-    <!-- Project Cards (unchanged) -->
-    <!-- ... omitted for brevity ... -->
-  </div>
-</section>
+    <!-- Skills Section -->
+    <section id="skills" class="skills">
+        <div class="container">
+            <h2 class="section-title">My Skills</h2>
+            <div class="skills-content">
+                <div class="skill-category">
+                    <h3>Programming Languages</h3>
+                    <div class="skill-items">                        
+                        <div class="skill-item">
+                            <i class="fab fa-js"></i>
+                            <p>JavaScript</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-python"></i>
+                            <p>Python</p>
+                        </div>
+                    </div>
+                </div>                      
+                <div class="skill-category">
+                    <h3>Tools & Technologies</h3>
+                    <div class="skill-items">
+                        <div class="skill-item">
+                            <i class="fab fa-git-alt"></i>
+                            <p>Git</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-docker"></i>
+                            <p>Docker</p>
+                        </div>
+                        <div class="skill-item">
+                            <i class="fab fa-aws"></i>
+                            <p>AWS</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<section>
-  <h2 class="section-title">Philosophy</h2>
-  <p>I believe in solving real-world business problems with elegant infrastructure design and automation. My approach balances strategic thinking with a hands-on problem-solving mindset.</p>
-</section>
+    <!-- Clients Section -->
+    <section id="clients" class="clients">
+        <div class="container">
+            <h2 class="section-title">Clients</h2>
+            <div class="clients-slider">
+                <div class="clients-track">
+                    <div class="client-item">
+                        <img src="img/clients/infosys.png" alt="Infosys">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/hp.png" alt="Hewlett Packard">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/comcast.png" alt="Comcast">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/pearson.png" alt="Pearson">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/sony.png" alt="Sony PlayStation">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/lotic.png" alt="Lotic.ai">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/acxiom.png" alt="Acxiom">
+                    </div>
+                    <!-- Duplicate clients for infinite scroll effect -->
+                    <div class="client-item">
+                        <img src="img/clients/infosys.png" alt="Infosys">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/hp.png" alt="Hewlett Packard">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/comcast.png" alt="Comcast">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/pearson.png" alt="Pearson">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/sony.png" alt="Sony PlayStation">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/lotic.png" alt="Lotic.ai">
+                    </div>
+                    <div class="client-item">
+                        <img src="img/clients/acxiom.png" alt="Acxiom">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-<footer class="mt-5 text-center">
-  <p>Let’s work together! Whether you're building your MVP or scaling to millions of users, I bring the experience and mindset to get your cloud and DevOps strategy right from day one.</p>
-  <p><a href="https://www.linkedin.com/in/dinesh-patra-9977b425/" target="_blank">Connect with me on LinkedIn</a></p>
-</footer>
-```
+    <!-- Projects Section -->
+    <section id="projects" class="projects">
+        <div class="container">
+            <h2 class="section-title">My Projects</h2>
+            <div class="projects-grid">
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/project1.jpg" alt="Project 1">
+                    </div>
+                    <div class="project-info">
+                        <h3>E-Commerce Platform</h3>
+                        <p>A full-stack e-commerce application with user authentication, product management, and payment integration.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>Node.js</span>
+                            <span>MongoDB</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/project2.jpg" alt="Project 2">
+                    </div>
+                    <div class="project-info">
+                        <h3>Task Management App</h3>
+                        <p>A productivity application for managing tasks with features like drag-and-drop, filtering, and reminders.</p>
+                        <div class="project-tech">
+                            <span>JavaScript</span>
+                            <span>HTML/CSS</span>
+                            <span>Firebase</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="project-card">
+                    <div class="project-image">
+                        <img src="img/project3.jpg" alt="Project 3">
+                    </div>
+                    <div class="project-info">
+                        <h3>Weather Dashboard</h3>
+                        <p>A weather application that provides real-time weather updates and forecasts using third-party APIs.</p>
+                        <div class="project-tech">
+                            <span>React</span>
+                            <span>API Integration</span>
+                            <span>CSS</span>
+                        </div>
+                        <div class="project-links">
+                            <a href="#" class="btn small-btn"><i class="fab fa-github"></i> Code</a>
+                            <a href="#" class="btn small-btn"><i class="fas fa-external-link-alt"></i> Demo</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  </div>
+    <!-- Contact Section -->
+    <section id="contact" class="contact">
+        <div class="container">
+            <h2 class="section-title">Get In Touch</h2>
+            <div class="contact-content">
+                <div class="contact-info">
+                    <div class="contact-item">
+                        <i class="fas fa-envelope"></i>
+                        <p>patra.dinesh@gmail.com</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-phone"></i>
+                        <p>+1 (908) 210-1255</p>
+                    </div>
+                    <div class="contact-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <p>Austin, TX</p>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://github.com/patradinesh" class="social-link"><i class="fab fa-github"></i></a>
+                        <a href="https://www.linkedin.com/in/dinesh-patra-9977b425/" class="social-link"><i class="fab fa-linkedin-in"></i></a>
+                    </div>
+                </div>
+                <div class="contact-form">
+                    <form id="contactForm">
+                        <div class="form-group">
+                            <input type="text" id="name" name="name" placeholder="Your Name" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="email" id="email" name="email" placeholder="Your Email" required>
+                        </div>
+                        <div class="form-group">
+                            <input type="text" id="subject" name="subject" placeholder="Subject" required>
+                        </div>
+                        <div class="form-group">
+                            <textarea id="message" name="message" placeholder="Your Message" required></textarea>
+                        </div>
+                        <button type="submit" class="btn primary-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
 
-  <script>
-    function toggleTheme() {
-      const html = document.documentElement;
-      const isDark = html.getAttribute('data-bs-theme') === 'dark';
-      html.setAttribute('data-bs-theme', isDark ? 'light' : 'dark');
-    }
-  </script>
+    <!-- Footer -->
+    <footer>
+        <div class="container">
+            <p>&copy; 2025 Dinesh Patra. All Rights Reserved.</p>
+        </div>
+    </footer>
 
+    <script src="js/script.js"></script>
 </body>
 </html>
